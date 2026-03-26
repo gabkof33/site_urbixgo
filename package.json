@@ -1,0 +1,15 @@
+{
+  "name": "urbixgo-site",
+  "version": "1.0.0",
+  "description": "Landing page UrbixGO com backend Express simples",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "keywords": ["mobilidade", "urbixgo", "landing"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}

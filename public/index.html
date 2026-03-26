@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbixGO | Mobilidade Urbana Inteligente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sprite de ícones vetoriais -->
+  <svg aria-hidden="true" class="icon-sprite" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="ico-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13"></path>
+      <circle cx="7" cy="16.5" r="1.5"></circle>
+      <circle cx="17" cy="16.5" r="1.5"></circle>
+      <path d="M5 13h14M2 14.5h2m16 0h2"></path>
+    </symbol>
+    <symbol id="ico-star" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 17.3l-5.09 3.08 1.36-5.83-4.5-3.9 5.93-.5L12 4l2.3 6.15 5.93.5-4.5 3.9 1.36 5.83z"/>
+    </symbol>
+    <symbol id="ico-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21s-6-5.1-6-10a6 6 0 1 1 12 0c0 4.9-6 10-6 10z"></path>
+      <circle cx="12" cy="11" r="2"></circle>
+    </symbol>
+    <symbol id="ico-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s-7-3.5-7-10V5l7-3 7 3v7c0 6.5-7 10-7 10z"></path>
+      <path d="M9 12l2 2 4-4"></path>
+    </symbol>
+    <symbol id="ico-money" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+      <path d="M7 9v6M17 9v6M10 12h4"></path>
+    </symbol>
+    <symbol id="ico-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13 2L3 14h7l-1 8 10-12h-7z"></path>
+    </symbol>
+    <symbol id="ico-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 12.5l3.5 3.5a2 2 0 0 0 2.8 0l1.2-1.2"></path>
+      <path d="M21 12.5l-3.5 3.5a2 2 0 0 1-2.8 0l-1.2-1.2"></path>
+      <path d="M3 9l3.5-3.5a2 2 0 0 1 2.8 0L11.5 8"></path>
+      <path d="M21 9l-3.5-3.5a2 2 0 0 0-2.8 0L12.5 8"></path>
+      <path d="M8 12l4 4 4-4"></path>
+    </symbol>
+    <symbol id="ico-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"></path>
+      <path d="M22 8l-10 6L2 8"></path>
+    </symbol>
+    <symbol id="ico-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.13 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.37 1.77.72 2.6a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.83.35 1.7.6 2.6.72A2 2 0 0 1 22 16.92z"></path>
+    </symbol>
+    <symbol id="ico-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    </symbol>
+  </svg>
+  <header class="hero" id="home">
+    <div class="blur-bg"></div>
+    <nav class="nav">
+      <a class="logo" href="#home" aria-label="UrbixGO">
+        <img src="assets/logo.svg" alt="Logo UrbixGO">
+      </a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#motoristas">Motoristas</a>
+        <a href="#contato" class="pill">Contato</a>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <section class="hero-content">
+      <div class="hero-text">
+        <div class="hero-brand">
+          <img src="assets/logo.svg" alt="Logo UrbixGO pequena">
+        </div>
+        <div class="badge">Mobilidade 24/7</div>
+        <h1>Sua corrida segura, rápida e com preço justo</h1>
+        <p>A UrbixGO conecta você ao seu destino com tecnologia, segurança e economia.</p>
+        <div class="cta-group">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.app.tsjukgurbixgo&pcampaignid=web_share" target="_blank" rel="noopener">Quero ser passageiro</a>
+          <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.app.jvjdozurbixgomotoristas&pcampaignid=web_share" target="_blank" rel="noopener">Quero ser motorista</a>
+        </div>
+        <div class="store-links">
+          <a class="store-link" href="https://apps.apple.com/br/app/urbixgo/id6757779355" target="_blank" rel="noopener">App iOS passageiro</a>
+        </div>
+        <div class="indicators">
+          <div class="chip"><svg class="ico"><use href="#ico-car"></use></svg> 24h disponível</div>
+          <div class="chip"><svg class="ico"><use href="#ico-star"></use></svg> Alta avaliação</div>
+          <div class="chip"><svg class="ico"><use href="#ico-pin"></use></svg> Presença regional</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone">
+          <div class="phone-top">
+            <div class="signal"></div>
+            <div class="cam"></div>
+            <div class="battery"></div>
+          </div>
+          <div class="phone-screen">
+            <div class="ride-card">
+              <p class="muted">Corrida ativa</p>
+              <h3>Centro → Aeroporto</h3>
+              <div class="ride-meta">
+                <span class="pill tiny">Chega em 3 min</span>
+                <span class="price">R$ 24,90</span>
+              </div>
+              <div class="driver">
+                <div class="avatar">LU</div>
+                <div>
+                  <strong>Lucas Andrade</strong>
+                  <p class="muted">Honda City • ABC1D23</p>
+                </div>
+                <div class="rating">4.9★</div>
+              </div>
+              <button class="btn compact">Acompanhar</button>
+            </div>
+            <div class="stats">
+              <div>
+                <p class="muted">Tempo médio</p>
+                <strong>03:12</strong>
+              </div>
+              <div>
+                <p class="muted">Corridas/dia</p>
+                <strong>18k+</strong>
+              </div>
+              <div>
+                <p class="muted">Motoristas</p>
+                <strong>7.5k</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="sobre" class="section about">
+      <div class="section-title">
+        <p class="eyebrow">Sobre</p>
+        <h2>Mobilidade urbana com propósito</h2>
+      </div>
+      <p class="lead">A UrbixGO é uma plataforma de mobilidade urbana que conecta passageiros e motoristas de forma inteligente, segura e acessível. Nascemos e operamos na região de Uberlândia, Minas Gerais, com o objetivo de transformar o transporte local, oferecendo preços justos, valorização dos motoristas e uma experiência de qualidade para todos.</p>
+    </section>
+
+    <section id="beneficios" class="section benefits">
+      <div class="section-title">
+        <p class="eyebrow">Benefícios</p>
+        <h2>Escolha que faz sentido para você</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="icon circle"><svg class="ico"><use href="#ico-shield"></use></svg></div>
+          <h3>Segurança garantida</h3>
+          <p>Verificação de motoristas, rotas monitoradas e suporte humano 24/7.</p>
+        </article>
+        <article class="card">
+          <div class="icon circle"><svg class="ico"><use href="#ico-money"></use></svg></div>
+          <h3>Preço justo</h3>
+          <p>Algoritmo inteligente para tarifas equilibradas, sem surpresas.</p>
+        </article>
+        <article class="card">
+          <div class="icon circle"><svg class="ico"><use href="#ico-bolt"></use></svg></div>
+          <h3>Rápido e confiável</h3>
+          <p>Despacho otimizado garante carros perto de você em poucos minutos.</p>
+        </article>
+        <article class="card">
+          <div class="icon circle"><svg class="ico"><use href="#ico-handshake"></use></svg></div>
+          <h3>Comunidade local</h3>
+          <p>Motoristas valorizados, presença regional e atendimento próximo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section how">
+      <div class="section-title">
+        <p class="eyebrow">Como funciona</p>
+        <h2>Em quatro passos simples</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span>1</span><p>Baixe o app</p></div>
+        <div class="step"><span>2</span><p>Defina seu destino</p></div>
+        <div class="step"><span>3</span><p>Confirme a corrida</p></div>
+        <div class="step"><span>4</span><p>Aproveite a viagem</p></div>
+      </div>
+      <a class="btn primary" href="#contato">Baixar aplicativo</a>
+    </section>
+
+    <section id="depoimentos" class="section testimonials">
+      <div class="section-title">
+        <p class="eyebrow">Depoimentos</p>
+        <h2>Experiências reais</h2>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <p class="muted">Carregando depoimentos...</p>
+      </div>
+    </section>
+
+    <section id="motoristas" class="section drivers">
+      <div class="drivers-content">
+        <div>
+          <p class="eyebrow">Motoristas</p>
+          <h2>Ganhe dinheiro dirigindo com a UrbixGO</h2>
+          <ul class="list">
+            <li>Ganhos competitivos</li>
+            <li>Flexibilidade</li>
+            <li>Taxas justas</li>
+            <li>Suporte dedicado</li>
+          </ul>
+          <a class="btn ghost light" href="#contato">Cadastrar como motorista</a>
+        </div>
+        <div class="driver-card">
+          <p class="muted">Saldo estimado</p>
+          <h3>R$ 1.280,00</h3>
+          <p class="small">Próximo saque em 2 dias</p>
+          <div class="meter"><span style="width:78%"></span></div>
+          <div class="driver-meta">
+            <div>
+              <p class="muted">Corridas</p>
+              <strong>46</strong>
+            </div>
+            <div>
+              <p class="muted">Aceitação</p>
+              <strong>97%</strong>
+            </div>
+            <div>
+              <p class="muted">Avaliação</p>
+              <strong>4.95?</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section contact">
+      <div class="contact-info">
+        <p class="eyebrow">Contato</p>
+        <h2>Fale com a UrbixGO</h2>
+        <ul class="contact-list">
+          <li><svg class="ico"><use href="#ico-phone"></use></svg> Telefone: (34) 99887-1420</li>
+          <li><svg class="ico"><use href="#ico-mail"></use></svg> Email: urbixgo@gmail.com.br</li>
+          <li><svg class="ico"><use href="#ico-instagram"></use></svg> Instagram: @urbixgo_br</li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <label>Nome
+          <input type="text" name="nome" placeholder="Seu nome" required />
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="seu@email.com" required />
+        </label>
+        <label>Mensagem
+          <textarea name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+        </label>
+        <button type="submit" class="btn primary full">Enviar mensagem</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#home" aria-label="UrbixGO">
+      <img src="assets/logo.svg" alt="Logo UrbixGO">
+    </a>
+    <div class="footer-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#motoristas">Motoristas</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <div class="social">
+      <span>Instagram</span>
+      <span>Facebook</span>
+      <span>LinkedIn</span>
+    </div>
+    <p class="muted">© 2026 UrbixGO. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

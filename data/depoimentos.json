@@ -1,0 +1,17 @@
+﻿[
+  {
+    "nome": "Ana Ribeiro",
+    "avaliacao": 5,
+    "comentario": "Motoristas atenciosos e preço justo. Uso todo dia!"
+  },
+  {
+    "nome": "Carlos Mendes",
+    "avaliacao": 5,
+    "comentario": "Corridas rápidas e suporte excelente. Me sinto seguro."
+  },
+  {
+    "nome": "Juliana Costa",
+    "avaliacao": 5,
+    "comentario": "Aplicativo intuitivo e com ótimas promoções na minha região."
+  }
+]
