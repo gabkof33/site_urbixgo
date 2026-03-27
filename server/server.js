@@ -28,14 +28,14 @@ app.get('/api/depoimentos', async (_req, res) => {
     res.json(depoimentos);
   } catch (err) {
     console.error('Erro ao ler depoimentos:', err.message);
-    res.status(500).json({ erro: 'Não foi possível carregar os depoimentos' });
+    res.status(500).json({ erro: 'Nï¿½o foi possï¿½vel carregar os depoimentos' });
   }
 });
 
 app.post('/contato', async (req, res) => {
   const { nome, email, mensagem } = req.body || {};
   if (!nome || !email || !mensagem) {
-    return res.status(400).json({ erro: 'Preencha nome, email e mensagem.' });
+    res.status(500).json({ erro: 'NÃ£o foi possÃ­vel carregar os depoimentos' });
   }
 
   try {
@@ -52,7 +52,7 @@ app.post('/contato', async (req, res) => {
     res.json({ sucesso: true });
   } catch (err) {
     console.error('Erro ao salvar contato:', err.message);
-    res.status(500).json({ erro: 'Não foi possível salvar agora.' });
+    res.status(500).json({ erro: 'NÃ£o foi possÃ­vel salvar agora.' });
   }
 });
 

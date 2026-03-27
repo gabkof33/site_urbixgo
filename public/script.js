@@ -58,14 +58,14 @@ async function loadTestimonials() {
       card.className = 'testimonial-card reveal';
       card.innerHTML = `
         <div class="name">${item.nome}</div>
-        <div class="stars">${'?'.repeat(item.avaliacao || 5)}</div>
+        <div class="stars">${'â˜…'.repeat(item.avaliacao || 5)}</div>
         <p class="muted">${item.comentario}</p>
       `;
       grid.appendChild(card);
       observer.observe(card);
     });
   } catch (err) {
-    grid.innerHTML = '<p class="muted">Não foi possível carregar depoimentos agora.</p>';
+    grid.innerHTML = '<p class="muted">Nï¿½o foi possï¿½vel carregar depoimentos agora.</p>';
   }
 }
 loadTestimonials();
@@ -90,7 +90,7 @@ if (form) {
       statusEl.style.color = '#6ee7b7';
       form.reset();
     } catch (err) {
-      statusEl.textContent = 'Não foi possível enviar agora. Tente novamente.';
+      statusEl.textContent = 'Nï¿½o foi possï¿½vel enviar agora. Tente novamente.';
       statusEl.style.color = '#f87171';
     }
   });
